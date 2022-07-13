@@ -2,5 +2,5 @@
 
 main_ver=1.23.0
 #minor_ver=1
-version=$main_ver#.$minor_ver
+version=$main_ver #.$minor_ver
 echo $version
