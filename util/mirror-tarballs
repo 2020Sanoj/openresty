@@ -582,7 +582,7 @@ mv openresty-rds-csv-nginx-module-* rds-csv-nginx-module-$ver || exit 1
 #################################
 
 ver=0.33
-git clone --recursive https://github.com/openresty/headers-more-nginx-module ../openresty/bundle/headers-more-nginx-module-$ver || exit 1
+git clone --recursive https://github.com/openresty/headers-more-nginx-module headers-more-nginx-module-$ver || exit 1
 
 #################################
 
@@ -594,7 +594,7 @@ mv openresty-drizzle-nginx-module-* drizzle-nginx-module-$ver || exit 1
 #################################
 
 ver=0.10.21
-git clone --recursive https://github.com/openresty/lua-nginx-module ../openresty/bundle/ngx_lua-$ver || exit 1
+git clone --recursive https://github.com/openresty/lua-nginx-module ngx_lua-$ver || exit 1
 
 #################################
 
@@ -627,7 +627,7 @@ mv openresty-memc-nginx-module-* memc-nginx-module-$ver || exit 1
 #################################
 
 ver=0.32
-git clone --recursive https://github.com/openresty/srcache-nginx-module ../openresty/bundle/srcache-nginx-module-$ver || exit 1
+git clone --recursive https://github.com/openresty/srcache-nginx-module srcache-nginx-module-$ver || exit 1
 
 #################################
 
@@ -661,7 +661,7 @@ mv openresty-encrypted-session-nginx-module-* encrypted-session-nginx-module-$ve
 #################################
 
 ver=0.3.9
-git clone --recursive https://github.com/centminmod/ngx_http_redis ../openresty/bundle/redis-nginx-module-$ver || exit 1
+git clone --recursive https://github.com/centminmod/ngx_http_redis redis-nginx-module-$ver || exit 1
 
 cd redis-nginx-module-$ver
 echo "applying ngx_http_redis-$ver-variables_in_redis_pass.patch"
