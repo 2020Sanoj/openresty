@@ -581,8 +581,10 @@ mv openresty-rds-csv-nginx-module-* rds-csv-nginx-module-$ver || exit 1
 
 #################################
 
-ver=0.33
-git clone --recursive https://github.com/openresty/headers-more-nginx-module headers-more-nginx-module-$ver || exit 1
+ver=0.34
+$root/util/get-tarball "https://github.com/openresty/headers-more-nginx-module/tarball/v$ver" -O headers-more-nginx-module-$ver.tar.gz || exit 1
+tar -xzf headers-more-nginx-module-$ver.tar.gz || exit 1
+mv openresty-headers-more-nginx-module-* headers-more-nginx-module-$ver || exit 1
 
 #################################
 
@@ -593,8 +595,10 @@ mv openresty-drizzle-nginx-module-* drizzle-nginx-module-$ver || exit 1
 
 #################################
 
-ver=0.10.21
-git clone --recursive https://github.com/openresty/lua-nginx-module ngx_lua-$ver || exit 1
+ver=0.10.22
+$root/util/get-tarball "https://github.com/openresty/lua-nginx-module/archive/v$ver.tar.gz" -O lua-nginx-module-$ver.tar.gz || exit 1
+tar -xzf lua-nginx-module-$ver.tar.gz || exit 1
+mv lua-nginx-module-$ver ngx_lua-$ver || exit 1
 
 #################################
 
