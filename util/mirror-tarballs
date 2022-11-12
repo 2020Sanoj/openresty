@@ -922,7 +922,7 @@ cp $root/util/build-win32.sh util/ || exit 1
 cp $root/COPYRIGHT ./ || exit 1
 perl bundle/$resty_cli/bin/md2pod.pl $root/doc/README-windows.md | pod2text > README-windows.txt || exit 1
 mkdir patches/ || exit 1
-cp $root/patches/openssl-*.patch patches/ || exit 1
+#cp $root/patches/openssl-*.patch patches/ || exit 1
 
 restydoc_index=$bundle_dir/$resty_cli/bin/restydoc-index
 #restydoc_index=echo
