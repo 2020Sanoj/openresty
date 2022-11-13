@@ -15,7 +15,6 @@ jobs:
       - name: patch nginx-openresty
         run: | 
          make -j "$(nproc)"
-         mv openresty-*.tar.gz openresty.tar.gz
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         if: github.event_name != 'pull_request'
