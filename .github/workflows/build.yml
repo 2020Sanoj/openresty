@@ -17,12 +17,12 @@ jobs:
          make -j "$(nproc)"
          mv openresty-*.tar.gz openresty.tar.gz
 
-    - uses: "marvinpinto/action-automatic-releases@latest"
-      if: github.event_name != 'pull_request'
-      with:
-        prerelease: false
-        repo_token: ${{ github.token }}
-        title: latest
-        automatic_release_tag: latest
-        files: |
-          openresty.tar.gz
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        if: github.event_name != 'pull_request'
+        with:
+          prerelease: false
+          repo_token: ${{ github.token }}
+          title: latest
+          automatic_release_tag: latest
+          files: |
+            openresty.tar.gz
